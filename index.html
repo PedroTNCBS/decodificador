@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> 
+    <title>Decodificador</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <h1 class="cabecalho__texto"> Decodificador</h1>
+    </header>
+    <main class="entrada">
+        <section class="entrada__dados">
+            <div class="entrada__texto">
+                <textarea class="entrada__texto__digitado" id="textoEntrada"></textarea>
+            </div>
+            <div class="alerta">
+                <p class="alerta__texto"> Apenas letras minúsculas e sem acento. </p>
+            </div>
+            <div class="botoes">
+                <button onclick="selecionarOpcao('criptografar')" class="botoes__criptografar">Criptografar</button>
+                <button onclick="selecionarOpcao('descriptografar')" class="botoes__descriptografar">descriptografar</button>
+            </div>
+        </section>
+        <section class="saida">
+            <div class="saida__dados">
+                <img src="img/procurando.webp" alt="Gif de uma lupa olhando e procurando" class="saida__dados__gif">
+                <p class="saida__dados__texto"> Nenhuma mensagem encontrada <br><br> Digite um texto que você deseja criptografar ou descriptografar. </p>
+            </div>
+            <div class="saida__conteudo">
+                <textarea class="saida__conteudo__tela" id="resultado" readonly></textarea>
+                <button class="saida__conteudo__copiar" onclick="copiarTexto()" id="copia"> Copiar </button>
+            </div>
+        </section>
+    </main>
+    <footer class="rodape">
+        <p class="rodape__texto"> Criado por Pedro Tavares Nery Castello Branco Serra </p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
